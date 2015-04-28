@@ -1,0 +1,1 @@
+document.ontouchmove=function(a){a.preventDefault()},console.info("main.js loaded");
