@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+    <style type="text/css">
+        .title {
+            text-align: center;
+        }
+        md-toolbar {
+            padding: 0 30px;
+        }
+        button.goButton {
+            background-color: #78e578;
+        }
+        button.goButton:hover {
+            background-color: #6bc96b;
+        }
+        .md-button.goButton:not([disabled]):hover {
+            background-color: #6bc96b;   
+        }
+        .footer {
+            font-size: small;
+        }
+
+    </style>
+</head>
+<!-- 
+    ng-app initializes the Angular application
+    ng-init initializes application data
+-->
+<body ng-app="starterApp" layout="column">
+    <!-- Toolbar -->
+    <md-toolbar-tools flex  layout-align="center center">
+        <md-toolbar layout="row">
+            <h3>Exchange Me</h3>
+            <span flex></span>
+            <md-button>Menu</md-button>
+        </md-toolbar>
+
+        <!-- Title -->
+        <md-content>
+            <h3 class="title">Select amount and currency that you have</h3>            
+        </md-content>
+
+        <!-- Content -->
+        <md-content ng-controller="BasicDemoCtrl as ctrl">
+
+            <div layout="row" layout-align="center center">
+                <h3>Amount to change</h3>
+                <md-input-container layout="row" layout-align="center center">
+                    <input ng-model="amountInit"></input>
+                </md-input-container>                                  
+            </div>
+
+            <div class="buttonContainer" layout="row" layout-align="center center">
+                <md-button class="md-accent md-raised" flex>
+                    <span>EU</span>
+                </md-button>
+                <md-button class="md-accent md-raised" flex>
+                    <span>USD</span>
+                </md-button>
+                <md-button class="md-accent md-raised" flex>
+                    <span>MXN</span>
+                </md-button>
+            </div>
+
+
+           <div layout="row" layout-align="center center">
+                <h3>Result</h3>
+                <md-input-container layout="row" layout-align="center center">
+                    <div>{{amountInit}}</div>
+                </md-input-container>                                  
+            </div>
+
+
+        </md-content>
+
+
+    </md-toolbar-tools>
+
+    <!-- Bottom toolbar -->
+    <md-toolbar-tools layout="row">
+        <span flex></span>
+        <md-button class="md-primary">Next</md-button>
+    </md-toolbar-tools>
+    <md-toolbar-tools class="footer" layout="row" layout-align="center center">
+        <span>Crafted with love in Mexico city and New York City.</span>
+    </md-toolbar-tools>
+
+
+</body>
+    <!-- Angular Libraries -->
+    <script src="../../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular.js"></script>
+
+    <script src="../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-aria.js"></script>
+
+    <script src="../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js"></script>
+
+    <script src="../../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular-messages.js"></script>
+
+    <!-- Angular material  --> 
+    <script src="../../node_modules/angular-material/angular-material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.js"></script>
+
+
+
+
+
+    <!-- Main JS File -->
+    <script src="js/main.js"></script>
+</html>
