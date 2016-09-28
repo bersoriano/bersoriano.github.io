@@ -26,6 +26,15 @@
         .footer {
             font-size: small;
         }
+        .picture {
+            width: 100px;
+            height: 100px;
+            background-color: blue;            
+        }
+
+        .showScreen3.ng-hide {
+            transition: 2s;
+        }
 
     </style>
 </head>
@@ -33,66 +42,144 @@
     ng-app initializes the Angular application
     ng-init initializes application data
 -->
-<body ng-app="starterApp" layout="column">
+<body flex ng-app="starterApp" layout="column"  ng-controller="BasicDemoCtrl as ctrl">
     <!-- Toolbar -->
     <md-toolbar-tools flex  layout-align="center center">
-        <md-toolbar layout="row">
-            <h3>Exchange Me</h3>
+        <!-- Top bar -->
+        <md-toolbar layout="row" flex>
+            <h3>ExchangeMe</h3>
             <span flex></span>
             <md-button>Menu</md-button>
         </md-toolbar>
+        <!-- Container - 1 -->
+        <md-content flex class="mainContainer" layout="column" layout-align="center center" 
+            ng-show="ctrl.showScreen1">
+            <!-- Content -->
+            <md-content>
+                <div layout="row" layout-align="center center">
+                    <h3>Amount to change:</h3>                                
+                </div>    
+                <div layout="row" layout-align="center center">
+                    <md-input-container layout="row" layout-align="center center">
+                        <input type="number" ng-model="ctrl.amountInit" style="text-align:center"></input>
+                    </md-input-container>                                  
+                </div>
+                <div layout="row" layout-align="center center">
+                    <h3>Currency</h3>                                
+                </div>                
+                <div class="buttonContainer" layout="row" layout-align="center center">
+                    <md-button class="md-accent md-raised" flex>
+                        <span>EU</span>
+                    </md-button>
+                    <md-button class="md-accent md-raised" flex>
+                        <span>USD</span>
+                    </md-button>
+                    <md-button class="md-accent md-raised" flex>
+                        <span>MXN</span>
+                    </md-button>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <h3>Select currency you want</h3>                                
+                </div>
+                <div class="buttonContainer" layout="row" layout-align="center center">
+                    <md-button class="md-accent md-raised" flex>
+                        <span>EU</span>
+                    </md-button>
+                    <md-button class="md-accent md-raised" flex>
+                        <span>USD</span>
+                    </md-button>
+                    <md-button class="md-accent md-raised" flex>
+                        <span>MXN</span>
+                    </md-button>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <h3>That will be:</h3>                                
+                </div>
+                <div layout="row" layout-align="center center">
+                    <h1>{{ctrl.amountInit}}</h1>
+                    <h1>MXN</h1>                    
+                </div>
+            </md-content>
 
-        <!-- Title -->
-        <md-content>
-            <h3 class="title">Select amount and currency that you have</h3>            
+            <!-- Bottom toolbar -->
+            <md-toolbar-tools layout="row">
+                <span flex></span>
+                <md-button class="md-primary" ng-click="ctrl.confirm()">Confirm</md-button>
+            </md-toolbar-tools>
+
         </md-content>
 
-        <!-- Content -->
-        <md-content ng-controller="BasicDemoCtrl as ctrl">
+        <!-- Container - 2 -->
+        <md-content flex class="mainContainer" layout="column" layout-align="center center"
+            ng-show="ctrl.showScreen2">
+            <!-- Content -->
+            <md-content>
+                <div layout="row" layout-align="center center" style="height: 300px;">
+                    <h3>Searching for users that matches your search</h3>                                
+                </div>
+                <div layout="row">
+                    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+                </div>    
+            </md-content>
 
-            <div layout="row" layout-align="center center">
-                <h3>Amount to change</h3>
-                <md-input-container layout="row" layout-align="center center">
-                    <input ng-model="amountInit"></input>
-                </md-input-container>                                  
+            <div ng-click="ctrl.searchButton()" style="margin-top:30px">
+                <div flex></div>
+                <md-button class="md-primary">Ok</md-button>
+                <div flex></div>
             </div>
-
-            <div class="buttonContainer" layout="row" layout-align="center center">
-                <md-button class="md-accent md-raised" flex>
-                    <span>EU</span>
-                </md-button>
-                <md-button class="md-accent md-raised" flex>
-                    <span>USD</span>
-                </md-button>
-                <md-button class="md-accent md-raised" flex>
-                    <span>MXN</span>
-                </md-button>
-            </div>
-
-
-           <div layout="row" layout-align="center center">
-                <h3>Result</h3>
-                <md-input-container layout="row" layout-align="center center">
-                    <div>{{amountInit}}</div>
-                </md-input-container>                                  
-            </div>
-
 
         </md-content>
 
+        <!-- Container - 3 -->
+        <md-content flex class="mainContainer showScreen3" layout="column" layout-align="center center"
+            ng-show="ctrl.showScreen3">
+            <!-- Content -->
+            <md-content>
+                <div layout="row" layout-align="center center">
+                    <h3>Congrats! 1 User Found!</h3>                                
+                </div>
+                <div layout="column" layout-align="center center">
+                    <div class="picture"></div>
+                    <div class="name"><span>Rubí</span></div>
+                    <div class=""><span>Rubí Notes:</span></div>
+                    <div class="">"I got a silver bag and a Sbucks"</div>
+                </div>
+            </md-content>            
+            <!-- Bottom toolbar -->
+            <md-toolbar-tools layout="row">
+                <md-button class="md-primary" ng-click="ctrl.confirm()">Cancel</md-button>
+                <span flex></span>
+                <md-button class="md-primary" ng-click="ctrl.confirmUser()">Confirm</md-button>
+            </md-toolbar-tools>
+        </md-content>
+
+        <!-- Container - 4 -->
+        <md-content flex class="mainContainer" layout="column" layout-align="center center"
+            ng-show="ctrl.showScreen4">
+            <!-- Content -->
+            <md-content>
+                <div layout="row" layout-align="center center">
+                    <h3>Meet her at:</h3>                                
+                </div>
+                <div layout="column" layout-align="center center">
+                    <div class="picture"></div>
+                    <div class="name"><span>Gate 7 Arrivals.</span></div>
+                    <div class="rating">****</div>
+                </div>
+            </md-content>            
+            <!-- Bottom toolbar -->
+            <md-toolbar-tools layout="row">
+                <md-button class="md-primary" ng-click="ctrl.confirm()">Cancel</md-button>
+                <span flex></span>
+                <md-button class="md-primary" ng-click="ctrl.confirm()">Confirm</md-button>
+            </md-toolbar-tools>
+        </md-content>          
 
     </md-toolbar-tools>
-
-    <!-- Bottom toolbar -->
-    <md-toolbar-tools layout="row">
-        <span flex></span>
-        <md-button class="md-primary">Next</md-button>
-    </md-toolbar-tools>
+    <!-- Footer -->
     <md-toolbar-tools class="footer" layout="row" layout-align="center center">
         <span>Crafted with love in Mexico city and New York City.</span>
     </md-toolbar-tools>
-
-
 </body>
     <!-- Angular Libraries -->
     <script src="../../node_modules/angular/angular.js"></script>
