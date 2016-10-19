@@ -1,0 +1,6 @@
+.chips1 .md-chip {
+  background-color: aliceblue;
+}
+.chips1 .md-chip .md-chip-content span {
+  font-weight: 500;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+    <style type="text/css">
+
+        body {
+            font-family: Gotham;
+        }
+        .title {
+            text-align: center;
+        }
+        md-toolbar {
+            padding: 0 30px;
+        }
+        button.goButton {
+            background-color: #78e578;
+        }
+        button.goButton:hover {
+            background-color: #6bc96b;
+        }
+        .md-button.goButton:not([disabled]):hover {
+            background-color: #6bc96b;   
+        }
+        .smallText {
+            font-size: small;
+            color: white;
+        }
+        .picture {
+            width: 100px;
+            height: 100px;
+            background-color: blue;            
+        }
+
+        .showScreen3 {
+            transition: 2s;
+        }
+        md-toolbar-tools.mainContainer {
+            background-image: url(assets/blurry-sunset.jpg);
+        }
+        md-content {
+            background: none;
+        }
+        .logo {
+            background-image: url(assets/stereo.png);
+            width: 300px;
+            height: 300px;
+            background-size: 300px;
+        }
+        .mainTitle {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .mainButton {
+            background-color: #3F51B5;
+            color: white;
+            min-width: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+        md-toolbar.menu {
+            background-color: transparent;
+        }
+        .menu .md-button {
+            max-height: 36px;
+        }
+        .mainPhrase {
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<!-- 
+        ng-app initializes the Angular application
+        ng-init initializes application data
+    -->
+    <body flex ng-app="starterApp" layout="column"  ng-controller="BasicDemoCtrl as ctrl">
+        <!-- Toolbar -->
+        <md-toolbar-tools class="mainContainer" flex  layout-align="center center">
+            <!-- Top bar -->
+            <md-toolbar class="menu" layout="row" flex>
+                <div flex></div>
+                <md-button class="md-raised">Artist discovery</md-button>
+                <md-button class="md-raised">Partners</md-button>
+                <md-button class="md-raised">Fans craving</md-button>
+                <md-button class="md-raised">Packages</md-button>
+                <md-button class="md-raised">About Us</md-button>
+                <md-button class="md-raised">Services</md-button>
+                <div flex></div>
+            </md-toolbar>
+
+
+        
+        <div ng-view></div>
+
+        <!-- Footer -->
+        <md-toolbar-tools class="smallText" layout="row" layout-align="center center">
+            <span>Crafted with love in Mexico city and New York City.</span>
+        </md-toolbar-tools>
+        </md-toolbar-tools>
+
+    </body>
+    <!-- Angular Libraries -->
+    <script src="../../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular.js"></script>
+
+    <script src="../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-aria.js"></script>
+
+    <script src="../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js"></script>
+
+    <script src="../../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular-messages.js"></script>
+
+    <script src="../../node_modules/angular-route/angular-route.js"></script>
+
+    <!-- Angular material  --> 
+    <script src="../../node_modules/angular-material/angular-material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.js"></script>
+
+
+
+
+
+    <!-- Main JS File -->
+    <script src="js/main.js"></script>
+</html>
