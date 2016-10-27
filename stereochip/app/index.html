@@ -7,103 +7,80 @@
 
     <link rel="stylesheet" href="styles/main.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
-    <style type="text/css">
-
-        body {
-            font-family: Gotham;
-        }
-        .title {
-            text-align: center;
-        }
-        md-toolbar {
-            padding: 0 30px;
-        }
-        button.goButton {
-            background-color: #78e578;
-        }
-        button.goButton:hover {
-            background-color: #6bc96b;
-        }
-        .md-button.goButton:not([disabled]):hover {
-            background-color: #6bc96b;   
-        }
-        .smallText {
-            font-size: small;
-            color: white;
-        }
-        .picture {
-            width: 100px;
-            height: 100px;
-            background-color: blue;            
-        }
-
-        .showScreen3 {
-            transition: 2s;
-        }
-        md-toolbar-tools.mainContainer {
-            background-image: url(assets/blurry-sunset.jpg);
-        }
-        md-content {
-            background: none;
-        }
-        .logo {
-            background-image: url(assets/stereo.png);
-            width: 300px;
-            height: 300px;
-            background-size: 300px;
-        }
-        .mainTitle {
-            text-align: center;
-            margin-bottom: 0;
-        }
-        .mainButton {
-            background-color: #3F51B5;
-            color: white;
-            min-width: 200px;
-            display: block;
-            margin: 10px auto;
-        }
-        md-toolbar.menu {
-            background-color: transparent;
-        }
-        .menu .md-button {
-            max-height: 36px;
-        }
-        .mainPhrase {
-            color: white;
-            text-align: center;
-        }
-
-    </style>
 </head>
 <!-- 
         ng-app initializes the Angular application
         ng-init initializes application data
     -->
-    <body flex ng-app="starterApp" layout="column"  ng-controller="BasicDemoCtrl as ctrl">
-        <!-- Toolbar -->
-        <md-toolbar-tools class="mainContainer" flex  layout-align="center center">
-            <!-- Top bar -->
-            <md-toolbar class="menu" layout="row" flex>
-                <div flex></div>
-                <md-button class="md-raised">Artist discovery</md-button>
-                <md-button class="md-raised">Partners</md-button>
-                <md-button class="md-raised">Fans craving</md-button>
-                <md-button class="md-raised">Packages</md-button>
-                <md-button class="md-raised">About Us</md-button>
-                <md-button class="md-raised">Services</md-button>
-                <div flex></div>
-            </md-toolbar>
-
-
+    <body ng-app="starterApp" layout="column"  ng-controller="BasicDemoCtrl as ctrl">
         
-        <div ng-view></div>
+        <md-content class="mainContainer">
+            <!-- Toolbar -->
+            <md-toolbar-tools layout-align="center center">
+                <!-- Top bar -->
+                <md-toolbar class="menu" layout="row">
+                    <div flex></div>
+                    <md-button class="md-raised">Artist discovery</md-button>
+                    <md-button class="md-raised">Partners</md-button>
+                    <md-button class="md-raised">Fans craving</md-button>
+                    <md-button class="md-raised">Packages</md-button>
+                    <md-button class="md-raised">About Us</md-button>
+                    <md-button class="md-raised">Services</md-button>
+                    <div flex></div>
+                </md-toolbar>
+            </md-toolbar-tools>
+            <!-- Content -->
+            <div>
+                <h1 class="mainTitle">StereoChip</h1>
+                <div layout="row" layout-align="center center" style="height: 300px;">
+                    <div class="logo"></div>                        
+                </div>  
+            </div>
+            <div ng-click="ctrl.searchButton()">
+                <div flex></div>
+                <h2 class="mainPhrase">"Super powers for your band! </br> Get more shows, fans, partners and become profitable!"</h2>
+                <md-button href="https://stereochip.typeform.com/to/wFKUU9" class="mainButton">Apply Here!</md-button>
+                <div flex></div>
+            </div>
+            <!-- Footer -->
+            <md-content class="smallText" layout="row" layout-align="center center">
+                <span>Crafted with love in Mexico city and New York City.</span>
+            </md-content>
+        </md-content>
 
-        <!-- Footer -->
-        <md-toolbar-tools class="smallText" layout="row" layout-align="center center">
-            <span>Crafted with love in Mexico city and New York City.</span>
-        </md-toolbar-tools>
-        </md-toolbar-tools>
+        <div class="howItWorks">
+            
+            <div class="bar">
+                <md-button>How it works!</md-button>                                
+            </div>
+
+
+
+            <section class="shadeSection">
+                <h2>1. Band application.</h2>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+            </section>
+
+            <section class="">
+                <h2>2. Design strategy.</h2>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+            </section>
+
+            <section class="shadeSection">
+                <h2>3. Strategy implementation.</h2>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+            </section>
+
+            <section class="">
+                <h2>4. Let's make God David Bowie be proud of you.</h2>
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+            </section>
+
+        </div>
+
+
+
+
 
     </body>
     <!-- Angular Libraries -->

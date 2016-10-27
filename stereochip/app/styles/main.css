@@ -1,6 +1,81 @@
-.chips1 .md-chip {
-  background-color: aliceblue;
-}
-.chips1 .md-chip .md-chip-content span {
-  font-weight: 500;
-}
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+  font-family: Montserrat; }
+
+.title {
+  text-align: center; }
+
+md-toolbar {
+  padding: 0 30px; }
+
+button.goButton {
+  background-color: #78e578; }
+
+button.goButton:hover {
+  background-color: #6bc96b; }
+
+.md-button.goButton:not([disabled]):hover {
+  background-color: #6bc96b; }
+
+.smallText {
+  font-size: small;
+  color: white; }
+
+.picture {
+  width: 100px;
+  height: 100px;
+  background-color: blue; }
+
+.showScreen3 {
+  transition: 2s; }
+
+.mainContainer {
+  background-image: url(../assets/blurry-sunset.jpg);
+  min-height: 650px; }
+
+.howItWorks {
+  min-height: 703px;
+  margin-top: -36px; }
+  .howItWorks section {
+    min-height: 300px;
+    max-height: 300px;
+    padding: 40px;
+    box-sizing: border-box; }
+  .howItWorks .bar button {
+    margin: 0 auto;
+    display: block;
+    background-color: #dadada;
+    border-radius: 0px; }
+
+.shadeSection {
+  background-color: #dadada; }
+
+md-content {
+  background: none; }
+
+.logo {
+  background-image: url(../assets/stereo.png);
+  width: 300px;
+  height: 300px;
+  background-size: 300px; }
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 0; }
+
+.mainButton {
+  background-color: #3F51B5;
+  color: white;
+  width: 200px;
+  display: block;
+  margin: 10px auto; }
+
+md-toolbar.menu {
+  background-color: transparent; }
+
+.menu .md-button {
+  max-height: 36px; }
+
+.mainPhrase {
+  color: white;
+  text-align: center; }
