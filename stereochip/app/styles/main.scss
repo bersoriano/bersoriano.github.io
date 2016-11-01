@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(OratorStd.otf);
 
 body {
     font-family: Montserrat;
@@ -32,60 +33,57 @@ button.goButton:hover {
     transition: 2s;
 }
 .mainContainer {
-    background-image: url(../assets/blurry-sunset.jpg);
+    // background-image: url(../assets/blurry-sunset.jpg);
+    background-image: url('https://xtensio.blob.core.windows.net/images/big/9pz49ca1/MQ2PDDCQn0qfUSIV7b9JIQ.jpg');
     min-height: 650px;
 }
 .howItWorks {
-    min-height: 703px; 
-    margin-top: -36px;  
     section {
-        min-height: 300px;
-        max-height: 300px;
-        padding: 40px;
+        width: 350px;
+        height: 280px;
+        padding: 20px;
         box-sizing: border-box;
         border-bottom: 2px solid #dadada;
-        position: relative;
+        border-right: 1px solid #dadada;
+        opacity: .8;
         .image {
-            width: 315px;
-            height: 150px;
-            background-size: 535px;
+            width: 280px;
+            height: 130px;
+            background-size: 400px;
             background-color: transparent;
+            opacity: .8;
             &.howItWorks1 {
                 background-image: url(../assets/1.png);
-                background-position: -125px -47px;
+                background-position: -53px -38px;
             }
             &.howItWorks2 {
                 background-image: url(../assets/2.png);
-                background-position: -136px -60px;
+                background-position: -80px -50px;
             }            
             &.howItWorks3 {
                 background-image: url(../assets/3.png);
-                background-size: 508px;
-                background-position: -114px -58px;
+                background-size: 400px;
+                background-position: -75px -57px;
             }
             &.howItWorks4 {
                 background-image: url(../assets/4.png);
-                background-position: -115px -58px;
-                background-size: 510px;
+                background-position: -56px -38px;
+                background-size: 373px;
+                width: 280px;
             }                              
         }
-        &.right {
-            h2,div {
-                float: right;
-            }
-            div {
-                position: absolute;
-                right: 50px;
-                top: 100px;                
-            }
+        h2 {
+            height: 75px;
+            text-align: center;
         }        
     }
     .bar {
+        border-bottom: 1px solid #dadada;
         button {
             margin: 0 auto;
             display: block;
             background-color: white;
-            border-radius:0px;            
+            border-radius:0px;
         }
     }
 }
@@ -108,6 +106,9 @@ md-content {
 .mainTitle {
     text-align: center;
     margin-bottom: 0;
+    font-family: oratorstd;
+    color: white;
+    font-size: 50px;    
 }
 .mainButton {
     background-color: #3F51B5;
@@ -121,8 +122,11 @@ md-toolbar.menu {
 }
 .menu .md-button {
     max-height: 36px;
+    min-width: 120px;
 }
 .mainPhrase {
     color: white;
     text-align: center;
+    margin-top: 0;
+    font-size: 25px;
 }
