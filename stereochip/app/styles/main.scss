@@ -37,6 +37,17 @@ button.goButton:hover {
     background-image: url('https://xtensio.blob.core.windows.net/images/big/9pz49ca1/MQ2PDDCQn0qfUSIV7b9JIQ.jpg');
     min-height: 650px;
 }
+.rocket {
+    background-image: url(http://ufldl.stanford.edu/wiki/images/8/81/Cartoon_Moon_Rocket.png);
+    width: 64px;
+    height: 108px;
+    position: absolute;
+    left: 842px;
+    top: 357px;
+    background-size: 63px;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(45deg);    
+}
 .howItWorks {
     section {
         width: 350px;
