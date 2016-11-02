@@ -1,0 +1,22 @@
+<!-- Container - 3 -->
+<md-content flex class="mainContainer showScreen3" layout="column" layout-align="center center"
+    ng-show="ctrl.showScreen3">
+    <!-- Content -->
+    <md-content>
+        <div layout="row" layout-align="center center">
+            <h3>Congrats! 1 User Found!</h3>                                
+        </div>
+        <div layout="column" layout-align="center center">
+            <div class="picture"></div>
+            <div class="name"><span>Rubí</span></div>
+            <div class=""><span>Rubí Notes:</span></div>
+            <div class="">"I got a silver bag and a Sbucks"</div>
+        </div>
+    </md-content>            
+    <!-- Bottom toolbar -->
+    <md-toolbar-tools layout="row">
+        <md-button class="md-primary" ng-click="ctrl.confirm()">Cancel</md-button>
+        <span flex></span>
+        <md-button class="md-primary" ng-click="ctrl.confirmUser()">Confirm</md-button>
+    </md-toolbar-tools>
+</md-content>

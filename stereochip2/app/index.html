@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+</head>
+<!-- 
+        ng-app initializes the Angular application
+        ng-init initializes application data
+    -->
+    <body ng-app="starterApp" layout="column"  ng-controller="BasicDemoCtrl as ctrl">
+        
+        <md-content class="mainContainer">
+            <!-- Toolbar -->
+            <md-toolbar-tools layout-align="center center">
+                <!-- Top bar -->
+                <md-toolbar class="menu" layout="row">
+                    <div flex></div>
+                    <md-button class="md-raised">Artist discovery</md-button>
+                    <md-button class="md-raised">Partners</md-button>
+                    <md-button class="md-raised">Fans craving</md-button>
+                    <md-button class="md-raised">Packages</md-button>
+                    <md-button class="md-raised">About Us</md-button>
+                    <md-button class="md-raised">Services</md-button>
+                    <div flex></div>
+                </md-toolbar>
+            </md-toolbar-tools>
+            <!-- Content -->
+            <div>
+                <h1 class="mainTitle">stereochip</h1>
+                <div layout="row" layout-align="center center" style="height: 300px;">
+                    <div class="logo"></div>                        
+                </div>  
+            </div>
+            <div ng-click="ctrl.searchButton()">
+                <div flex></div>
+                <h2 class="mainPhrase">"Super powers for your band! </br> Get more shows, fans, partners and revenues!"</h2>
+                <md-button href="https://stereochip.typeform.com/to/wFKUU9" class="mainButton">Apply Here!</md-button>
+                <div flex></div>
+                <div class="rocket"></div>
+            </div>
+            <!-- Footer -->
+            <md-content class="smallText" layout="row" layout-align="center center">
+                <span>Crafted with love in Mexico city and New York City.</span>
+            </md-content>
+        </md-content>
+
+        <div class="howItWorks">
+            
+            <div class="bar">
+                <md-button>How it works!</md-button>                                
+            </div>
+
+
+            <div class="container" layout="row">
+
+                <section>
+                    <h2>1. Band application.</h2>
+                    <div class="image howItWorks1"></div>
+                </section>
+
+                <section>
+                    <h2>2. Design strategy.</h2>
+                    <div class="image howItWorks2"></div>
+                </section>
+
+                <section>
+                    <h2>3. Strategy implementation.</h2>
+                    <div class="image howItWorks3"></div>
+                </section>
+
+                <section>
+                    <h2>4. Let's make God David Bowie be proud of you.</h2>
+                    <div class="image howItWorks4"></div>
+                </section>
+                
+            </div>
+
+
+        </div>
+
+        <div class="bandApplication">
+            
+        </div>
+
+
+
+
+
+    </body>
+    <!-- Angular Libraries -->
+    <script src="../../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular.js"></script>
+
+    <script src="../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-aria.js"></script>
+
+    <script src="../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js"></script>
+
+    <script src="../../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-rc.2/angular-messages.js"></script>
+
+    <script src="../../node_modules/angular-route/angular-route.js"></script>
+
+    <!-- Angular material  --> 
+    <script src="../../node_modules/angular-material/angular-material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.js"></script>
+
+
+
+
+
+    <!-- Main JS File -->
+    <script src="js/main.js"></script>
+</html>
