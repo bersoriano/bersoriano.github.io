@@ -24,6 +24,40 @@ angular
 		console.log('Controller launched');
 		var vm = this;
 
+		vm.artistsCollection = [
+			{
+				'name': 'Mon Laferte',
+				'img': 'monPic'
+			},
+			{
+				'name': 'Rubí Marín',
+				'img': 'RubiPic'				
+			},
+			{
+				'name': 'Bernardo Soriano',
+				'img': 'BerPic'				
+			},
+			{
+				'name': 'Sotomayor',
+				'img': 'SotoMayPic',				
+			},
+			{
+				'name': 'Babasónicos',
+				'img': 'BabasPic'				
+			},
+			{
+				'name': 'Mon Laferte',
+				'img': 'monPic'
+			},
+			{
+				'name': 'Rubí Marín',
+				'img': 'RubiPic'				
+			},
+			{
+				'name': 'Sotomayor',
+				'img': 'SotoMayPic',				
+			}						
+		];
 
 	}]);
 

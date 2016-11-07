@@ -141,3 +141,65 @@ md-toolbar.menu {
     margin-top: 0;
     font-size: 25px;
 }
+
+md-toolbar.titleToolbar {
+    margin: 25px 0 0;
+    background-color: #1565C0;    
+}
+
+.discoveryContainer {
+    background-color: #656565;
+    min-height: 500px;
+    padding: 30px 50px;
+    .artistCollection {
+        width: 765px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.artistAlbum {
+    width: 150px;
+    height: 150px;
+    background-color: #272626;
+    margin: 20px;
+    display: inline-block;
+    min-height: 211px;
+    border-left: 1px solid gray;
+    .albumCover {
+        background-color: gray;
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        &.monPic {
+            background-image: url('http://img2-ak.lst.fm/i/u/300x300/438f0a4fc7e5385cf781ef4da39fa911.png');
+            background-size: 150px;
+        }
+        &.RubiPic {
+            background-image: url('../assets/rubs.jpg');
+            background-size: 150px;
+        }                 
+        &.BerPic {
+            background-image: url('../assets/ber.jpg');
+            background-size: 150px;            
+        }
+        &.SotoMayPic {
+            background-image: url('http://www.freim.tv/wp-content/uploads/2015/01/soto.jpg');
+            background-size: 290px;
+            background-position-x: 221px;           
+        }
+        &.BabasPic {
+            background-image: url('http://3.bp.blogspot.com/_qmiOxoxKdPI/SeXuvVaiYuI/AAAAAAAAARc/fWtsqbKPkWY/s400/1BABASONICOS20MZO.jpg');
+            background-size: 150px;
+        }
+    }
+    .artistName {
+        display: block;
+        text-align: center;
+        padding: 11px;
+        border-top: 1px solid #9c9c9c;
+        min-height: 30px;
+        color: white;
+        text-shadow: 0px 0px 10px;
+    }   
+}
