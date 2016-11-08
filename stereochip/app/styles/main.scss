@@ -1,8 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(OratorStd.otf);
 
+
+$black: rgba(43, 43, 43, 0.87);
+$white: #e0e0e0;
+
 body {
     font-family: Montserrat;
+    background-color: #4a4a4a;
 }
 .title {
     text-align: center;
@@ -48,7 +53,12 @@ button.goButton:hover {
     background-repeat: no-repeat;
     -webkit-transform: rotate(45deg);    
 }
+.buttonIcon {
+    color: white;
+    fill: currentcolor;
+}
 .howItWorks {
+    background-color: rgb(250,250,250);
     section {
         width: 350px;
         height: 280px;
@@ -118,15 +128,18 @@ md-content {
     text-align: center;
     margin-bottom: 0;
     font-family: oratorstd;
-    color: white;
+    color: $black;
     font-size: 50px;    
 }
 .mainButton {
-    background-color: #3F51B5;
+    background-color: #7298ad;
     color: white;
     width: 200px;
     display: block;
     margin: 10px auto;
+    &:hover {
+        background-color: #7298ad !important;
+    }
 }
 md-toolbar.menu {
     background-color: transparent;
@@ -134,9 +147,19 @@ md-toolbar.menu {
 .menu .md-button {
     max-height: 36px;
     min-width: 120px;
+    background-color: $black;
+    color: $white;
+    &:hover {
+        background-color: $black !important;
+    }
+}
+.menu {
+    &.genre {
+        background-color: #4a4a4a;        
+    }
 }
 .mainPhrase {
-    color: white;
+    color: $black;
     text-align: center;
     margin-top: 0;
     font-size: 25px;
@@ -144,33 +167,40 @@ md-toolbar.menu {
 
 md-toolbar.titleToolbar {
     margin: 25px 0 0;
-    background-color: #1565C0;    
+    background-color: #1b5290;    
 }
 
 .discoveryContainer {
-    background-color: #656565;
+    background-color: #1f1f1f;
     min-height: 500px;
     padding: 30px 50px;
     .artistCollection {
-        width: 765px;
+        width: 1024px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
     }
 }
 .artistAlbum {
-    width: 150px;
+    width: 210px;
     height: 150px;
     background-color: #272626;
     margin: 20px;
     display: inline-block;
     min-height: 211px;
-    border-left: 1px solid gray;
+    border: 1px solid #353535;
+    box-shadow: 0px 0px 0px 0px;
+    transition: .5s;
+    &:hover {
+        box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.24) !important;
+        transition: .5s;
+    }
     .albumCover {
         background-color: gray;
         width: 150px;
         height: 150px;
         border-radius: 100px;
+        margin: 17px auto 0px;
         &.monPic {
             background-image: url('http://img2-ak.lst.fm/i/u/300x300/438f0a4fc7e5385cf781ef4da39fa911.png');
             background-size: 150px;
@@ -197,9 +227,26 @@ md-toolbar.titleToolbar {
         display: block;
         text-align: center;
         padding: 11px;
-        border-top: 1px solid #9c9c9c;
         min-height: 30px;
         color: white;
         text-shadow: 0px 0px 10px;
     }   
+}
+.artistMediaContainer {
+    height: 250px;
+    background-color: aliceblue;
+    .container {
+        width: 805px;
+        margin: 0 auto;
+        .contentLeft {
+            width: 400px;
+            border: 1px solid gray;
+            height: inherit;        
+        }
+        .contentRight {
+            width: 400px;
+            border: 1px solid gray;
+            height: inherit;        
+        }        
+    }    
 }

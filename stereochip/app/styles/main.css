@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(OratorStd.otf);
 body {
-  font-family: Montserrat; }
+  font-family: Montserrat;
+  background-color: #4a4a4a; }
 
 .title {
   text-align: center; }
@@ -45,46 +46,51 @@ button.goButton:hover {
   background-repeat: no-repeat;
   -webkit-transform: rotate(45deg); }
 
-.howItWorks section {
-  width: 350px;
-  height: 280px;
-  padding: 20px;
-  box-sizing: border-box;
-  border-bottom: 2px solid #dadada;
-  border-right: 1px solid #dadada;
-  opacity: .8; }
-  .howItWorks section .image {
-    width: 280px;
-    height: 130px;
-    background-size: 400px;
-    background-color: transparent;
-    opacity: .8; }
-    .howItWorks section .image.howItWorks1 {
-      background-image: url(../assets/1.png);
-      background-position: -53px -38px; }
-    .howItWorks section .image.howItWorks2 {
-      background-image: url(../assets/2.png);
-      background-position: -80px -50px; }
-    .howItWorks section .image.howItWorks3 {
-      background-image: url(../assets/3.png);
-      background-size: 400px;
-      background-position: -75px -57px; }
-    .howItWorks section .image.howItWorks4 {
-      background-image: url(../assets/4.png);
-      background-position: -56px -38px;
-      background-size: 373px;
-      width: 280px; }
-  .howItWorks section h2 {
-    height: 75px;
-    text-align: center; }
+.buttonIcon {
+  color: white;
+  fill: currentcolor; }
 
-.howItWorks .bar {
-  border-bottom: 1px solid #dadada; }
-  .howItWorks .bar button {
-    margin: 0 auto;
-    display: block;
-    background-color: white;
-    border-radius: 0px; }
+.howItWorks {
+  background-color: #fafafa; }
+  .howItWorks section {
+    width: 350px;
+    height: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #dadada;
+    border-right: 1px solid #dadada;
+    opacity: .8; }
+    .howItWorks section .image {
+      width: 280px;
+      height: 130px;
+      background-size: 400px;
+      background-color: transparent;
+      opacity: .8; }
+      .howItWorks section .image.howItWorks1 {
+        background-image: url(../assets/1.png);
+        background-position: -53px -38px; }
+      .howItWorks section .image.howItWorks2 {
+        background-image: url(../assets/2.png);
+        background-position: -80px -50px; }
+      .howItWorks section .image.howItWorks3 {
+        background-image: url(../assets/3.png);
+        background-size: 400px;
+        background-position: -75px -57px; }
+      .howItWorks section .image.howItWorks4 {
+        background-image: url(../assets/4.png);
+        background-position: -56px -38px;
+        background-size: 373px;
+        width: 280px; }
+    .howItWorks section h2 {
+      height: 75px;
+      text-align: center; }
+  .howItWorks .bar {
+    border-bottom: 1px solid #dadada; }
+    .howItWorks .bar button {
+      margin: 0 auto;
+      display: block;
+      background-color: white;
+      border-radius: 0px; }
 
 .shadeSection {
   background-color: #dadada; }
@@ -102,56 +108,71 @@ md-content {
   text-align: center;
   margin-bottom: 0;
   font-family: oratorstd;
-  color: white;
+  color: rgba(43, 43, 43, 0.87);
   font-size: 50px; }
 
 .mainButton {
-  background-color: #3F51B5;
+  background-color: #7298ad;
   color: white;
   width: 200px;
   display: block;
   margin: 10px auto; }
+  .mainButton:hover {
+    background-color: #7298ad !important; }
 
 md-toolbar.menu {
   background-color: transparent; }
 
 .menu .md-button {
   max-height: 36px;
-  min-width: 120px; }
+  min-width: 120px;
+  background-color: rgba(43, 43, 43, 0.87);
+  color: #e0e0e0; }
+  .menu .md-button:hover {
+    background-color: rgba(43, 43, 43, 0.87) !important; }
+
+.menu.genre {
+  background-color: #4a4a4a; }
 
 .mainPhrase {
-  color: white;
+  color: rgba(43, 43, 43, 0.87);
   text-align: center;
   margin-top: 0;
   font-size: 25px; }
 
 md-toolbar.titleToolbar {
   margin: 25px 0 0;
-  background-color: #1565C0; }
+  background-color: #1b5290; }
 
 .discoveryContainer {
-  background-color: #656565;
+  background-color: #1f1f1f;
   min-height: 500px;
   padding: 30px 50px; }
   .discoveryContainer .artistCollection {
-    width: 765px;
+    width: 1024px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; }
 
 .artistAlbum {
-  width: 150px;
+  width: 210px;
   height: 150px;
   background-color: #272626;
   margin: 20px;
   display: inline-block;
   min-height: 211px;
-  border-left: 1px solid gray; }
+  border: 1px solid #353535;
+  box-shadow: 0px 0px 0px 0px;
+  transition: .5s; }
+  .artistAlbum:hover {
+    box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.24) !important;
+    transition: .5s; }
   .artistAlbum .albumCover {
     background-color: gray;
     width: 150px;
     height: 150px;
-    border-radius: 100px; }
+    border-radius: 100px;
+    margin: 17px auto 0px; }
     .artistAlbum .albumCover.monPic {
       background-image: url("http://img2-ak.lst.fm/i/u/300x300/438f0a4fc7e5385cf781ef4da39fa911.png");
       background-size: 150px; }
@@ -172,7 +193,21 @@ md-toolbar.titleToolbar {
     display: block;
     text-align: center;
     padding: 11px;
-    border-top: 1px solid #9c9c9c;
     min-height: 30px;
     color: white;
     text-shadow: 0px 0px 10px; }
+
+.artistMediaContainer {
+  height: 250px;
+  background-color: aliceblue; }
+  .artistMediaContainer .container {
+    width: 805px;
+    margin: 0 auto; }
+    .artistMediaContainer .container .contentLeft {
+      width: 400px;
+      border: 1px solid gray;
+      height: inherit; }
+    .artistMediaContainer .container .contentRight {
+      width: 400px;
+      border: 1px solid gray;
+      height: inherit; }

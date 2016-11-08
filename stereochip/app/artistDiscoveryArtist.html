@@ -4,6 +4,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
 
     <link rel="stylesheet" href="styles/main.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
@@ -20,18 +21,27 @@
             <md-toolbar-tools layout-align="center center">
                 <!-- Top bar -->
                 <md-toolbar class="titleToolbar" layout="row">
-                    <md-button class="buttonIcon" href="index.html">
+                    <md-button>
                         <ng-md-icon icon="chevron_left" size="48"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></ng-md-icon>
-                    </md-button>                
-                    <h3>Artist discovery</h3>
+                    </md-button>
+                    <h3>Artist discovery > London Grammar</h3>
                     <div flex></div>
                 </md-toolbar>
             </md-toolbar-tools>
 
+            <!-- Artist Media -->
+            <div class="artistMediaContainer">
+                <div class="container">
+                    <div class="contentLeft"></div>
+                    <div class="contentRight"></div>                    
+                </div>
+            </div>
+
+
             <!-- Toolbar -->
             <md-toolbar-tools layout-align="center center">
                 <!-- Top bar -->
-                <md-toolbar class="menu genre" layout="row" layout-align="center center">
+                <md-toolbar class="menu" layout="row" layout-align="center center">
                     <div flex></div>
                     <md-button class="md-raised">House</md-button>
                     <md-button class="md-raised">Rock</md-button>
@@ -40,17 +50,6 @@
                     <div flex></div>
                 </md-toolbar>
             </md-toolbar-tools>
-            <div class="discoveryContainer">
-                <!-- Toolbar -->
-                <div class="artistCollection">
-                    <div class="artistAlbum" ng-repeat="artist in ctrl.artistsCollection">
-                        <div class="albumCover {{artist.img}}">
-                            
-                        </div>
-                        <div class="artistName">{{artist.name}}</div>
-                    </div>                
-                </div>                
-            </div>
 
         </md-content>
 
