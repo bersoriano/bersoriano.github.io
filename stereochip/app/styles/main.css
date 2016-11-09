@@ -51,7 +51,7 @@ button.goButton:hover {
   fill: currentcolor; }
 
 .howItWorks {
-  background-color: #fafafa; }
+  background-color: #fdfdfd; }
   .howItWorks section {
     width: 350px;
     height: 280px;
@@ -132,7 +132,9 @@ md-toolbar.menu {
     background-color: rgba(43, 43, 43, 0.87) !important; }
 
 .menu.genre {
-  background-color: #4a4a4a; }
+  background-color: #4a4a4a;
+  height: 45px;
+  min-height: 45px; }
 
 .mainPhrase {
   color: rgba(43, 43, 43, 0.87);
@@ -141,8 +143,10 @@ md-toolbar.menu {
   font-size: 25px; }
 
 md-toolbar.titleToolbar {
-  margin: 25px 0 0;
-  background-color: #1b5290; }
+  background-color: #1b5290;
+  height: 50px; }
+  md-toolbar.titleToolbar h3 {
+    line-height: 15px; }
 
 .discoveryContainer {
   background-color: #1f1f1f;

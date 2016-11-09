@@ -58,7 +58,7 @@ button.goButton:hover {
     fill: currentcolor;
 }
 .howItWorks {
-    background-color: rgb(250,250,250);
+    background-color: #fdfdfd;
     section {
         width: 350px;
         height: 280px;
@@ -155,7 +155,9 @@ md-toolbar.menu {
 }
 .menu {
     &.genre {
-        background-color: #4a4a4a;        
+        background-color: #4a4a4a;
+        height: 45px;
+        min-height: 45px;                
     }
 }
 .mainPhrase {
@@ -166,8 +168,11 @@ md-toolbar.menu {
 }
 
 md-toolbar.titleToolbar {
-    margin: 25px 0 0;
-    background-color: #1b5290;    
+    background-color: #1b5290;
+    height: 50px;
+    h3 {
+        line-height: 15px;
+    }
 }
 
 .discoveryContainer {
