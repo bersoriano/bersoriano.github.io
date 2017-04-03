@@ -253,4 +253,8 @@ button.mat-button {
         flex: 1;
     -webkit-box-flex: 1; }
 
+/* Reset */
+.mat-button-focus-overlay {
+  background-color: initial !important; }
+
 /*# sourceMappingURL=styles.bundle.map*/
