@@ -1,8 +1,0 @@
-<md-toolbar class="navigation">
-	<button md-button class="navItem"
-		[ngClass]="navEl.active"
-		(click)="selectedNavigation(navEl)"
-		*ngFor="let navEl of navigationMenu" 
-		routerLink="{{navEl.router}}">{{navEl.name}}</button>
-</md-toolbar>
-<router-outlet></router-outlet>
