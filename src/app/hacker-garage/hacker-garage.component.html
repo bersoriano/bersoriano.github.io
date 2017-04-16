@@ -1,0 +1,28 @@
+<div class="mainAppContainer">
+	<div class="mainContent">
+		<!-- Menu -->
+		<div class="menu">
+			<h4>Hackathons</h4>
+			<md-list class="menuList scrollable">
+			  <md-list-item class="" *ngFor="let hackathon of hackathonList">
+			  	<a>{{hackathon.name}}</a>
+			  </md-list-item>
+			</md-list>		
+			<h4>Projects</h4>
+			<md-list class="menuList scrollable">
+			  <md-list-item class="" *ngFor="let project of projectsList">
+			  	<a href="">{{project.name}}</a>
+			  </md-list-item>
+			</md-list>
+		</div>
+		<!-- Resume -->
+		<div class="resume">
+			<div class="topSection standardBox">
+				<div class="header">
+					<h1 class="title">Hacker garage</h1>	
+					<h2 class="subTitle">Hackathons | Demos | Open Source projects | Material design components</h2>				
+				</div>
+			</div>		
+		</div>	
+	</div>
+</div>

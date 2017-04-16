@@ -1,0 +1,167 @@
+$primary: #1976D2;
+
+// Common
+.standardBox
+	padding: 15px 40px;
+// Sections
+
+.topSection
+	display: flex;
+	flex-direction: row;	
+	span
+		display: block;
+		text-align: center;
+	.title,.subTitle
+		margin-bottom: 0;
+	.title
+		font-size: 22px;
+	.subTitle
+		font-size: 18px;
+	.header
+		display: flex;
+		flex-direction: column;
+		flex: 5;	
+	.actions
+		display: flex;
+		flex-direction: row;
+		flex: 1;	
+
+.accesibility
+	padding: 0;
+	min-width: 35px;	
+	&.increaseSize
+		font-size: 22px;
+	&.bold
+		font-weight: 600;
+	&:hover
+		background-color: rgba(234, 234, 234, 0.25);
+		border: 1px solid #e3e3e3;
+.resume
+	background-color: white;
+	flex: 5;
+	width: 740px;
+.mainAppContainer
+	background-color: #f0f0f0;
+	transition: .3s;
+	position: relative;
+	&.largerFontActive
+		.summary,.regularText,li
+			font-size: 18px;
+			transition: .3s;
+	&.boldFontActive
+		.summary,.regularText,li
+			font-weight: 600;
+			transition: .3s;	
+
+.heroSpace
+	transition: .3s;
+	overflow: hidden;
+	position: relative;
+	min-height: 94vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	.background
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		opacity: .8;
+		background: url(./assets/ny2.jpg) center no-repeat fixed;	
+	.heroText
+		position: absolute;
+		width: 100%;
+		margin: 35% 0 0 0;
+		font-size: 44px;
+		color: #dfdcdc;
+		text-shadow: 1px 1px 1px rgba(49, 49, 49, 0.52);
+		padding: 30px;
+	.space
+	    display: flex;
+	    flex: 30;
+	    text-align: center;	
+	footer
+		display: flex;
+		flex: 1;
+		margin: 0 auto;
+		color: #dcdcdc;
+.heroNav
+	min-width: 200px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: white;
+	margin: 40px;
+	opacity: .8;
+	border-radius: 10px;
+	padding: 10px 25px;
+	.navElement
+		display: block;
+		margin: 20px 0px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #dcdcdc;
+		cursor: pointer;
+
+.mainContent
+	display: flex;
+
+.divider
+	display: flex;
+	flex: 1;
+	height: 1px;
+	background-color: rgba(128, 128, 128, 0.15);
+	margin: 0px 40px;
+
+.menu,.heroNav
+	display: none;
+
+
+@media screen and (min-width: 1100px)
+
+	.mainAppContainer
+		display: flex;
+		flex-direction: column;
+		.heroNav
+			display: initial;		
+		.resume,.menu
+			border: 1px solid #eaeaea;
+			background-color: white;
+			margin: 30px 30px 30px 0px;
+		.menu
+			display: flex;
+			flex: 2;
+			flex-direction: column;
+			opacity: .9;
+			padding: 20px 0;
+			max-width: 230px;
+			a
+				padding: 13px 0px 10px 10px;
+			.menuList.mat-list
+				padding: 0;
+				border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+				margin-bottom: 15px;
+				padding-bottom: 10px;
+				&.scrollable
+					overflow-y: scroll;
+					max-height: 210px;					
+				.mat-list-item
+					margin-bottom: 1px;
+					min-height: 50px;
+					height: 50px;
+					&.active
+						background-color: $primary;
+						color: white;					
+					.mat-list-item-content
+						min-height: inherit;
+						height: inherit
+					&:hover
+						background-color: #F5F5F5;										
+			h4
+				text-align: left;
+				padding: 10px 20px;
+				margin: 0;
+				color: #1976d2;
+
+	.mainContent
+		display: flex;
+		flex: 2;
+

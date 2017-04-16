@@ -1,0 +1,100 @@
+<div class="mainAppContainer" 
+	[ngClass]="{'largerFontActive': selectedLargerFont, 
+				'boldFontActive': selectedBoldFont}">
+	<div class="mainContent">
+		<!-- Menu -->
+		<div class="menu">
+			<h3 class="profileInfo">Profile Info</h3>
+			<div class="profileImage">
+				<img src="./assets/ber.png">
+			</div>
+			<h4>Resume</h4>
+			<md-list class="menuList">
+			  <md-list-item class="active">
+			  	<a>Professional Summary</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a>Skills</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a>Education</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a>Experience</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a>Courses</a>
+			  </md-list-item>
+			</md-list>		
+			<h4>Social media</h4>
+			<md-list class="menuList">
+			  <md-list-item>
+			  	<a href="https://twitter.com/bersoriano">Twitter</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a href="http://www.linkedin.com/in/bernardosoriano">LinkedIn</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a href="http://www.instagram.com/bersoriano/">Instagram</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a href="http://www.behance.net/bersoriano">Behance</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a href="http://github.com/bersoriano">Github</a>
+			  </md-list-item>
+			  <md-list-item>
+			  	<a href="https://medium.com/@bersoriano">Medium</a>
+			  </md-list-item>		  
+			</md-list>
+		</div>
+		<!-- Resume -->
+		<div class="resume">
+			<!-- Top Section -->
+			<div class="topSection standardBox">
+				<div class="header">
+					<h1 class="title">Bernardo Soriano - User Interface Engineer</h1>	
+					<h2 class="subTitle">www.bernardosoriano.com | bersoriano@me.com | @bersoriano</h2>				
+				</div>
+				<div class="actions">
+					<button md-button class="accesibility increaseSize"
+							(click)="largerFont()">A</button>
+					<button md-button class="accesibility bold"
+							(click)="bolderFont()">A</button>				
+				</div>
+			</div>
+			<!-- Professional summary -->
+			<div class="professionalSummary standardBox">
+				<div class="header active">
+					<span class="sectionTitle bold">Professional Summary.</span>
+				</div>
+				<div class="summary">
+					<span>End to end development, design and delivery of easy to use applications from scratch, experience working in large scale web applications for finance.</span>
+					<span>Some of the products delivered includes mobile banking, transactional banking, interactive insurance calculators and dashboards, iPad web interfaces, interactive touch kiosks, sales tools for global markets and stock trading pricer tools.</span>
+					<span>Cross-functional interactions with back-end engineering, experience design, business analysts, senior management and product teams.</span>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<!-- Developer Skills -->
+			<app-skills></app-skills>
+			<div class="divider"></div>
+			<!-- Relevant courses -->
+			<div class="standardBox">
+				<div class="header">
+					<span class="sectionTitle bold">Relevant courses.</span>		
+				</div>
+				<ul>
+					<li>Certified Scrum Master (Scrum Alliance)</li>
+					<li>Leadership and Technology Management (University of California, Berkeley) </li>
+				</ul>	
+			</div>
+			<div class="divider"></div>
+			<!-- Working Experience -->
+			<div class="standardBox">
+				<div class="experienceContainer">
+					<app-experience></app-experience>	
+				</div>
+			</div>			
+		</div>	
+	</div>
+</div>

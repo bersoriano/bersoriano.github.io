@@ -1,0 +1,31 @@
+<!-- Developer Skills -->
+<div class="standardBox" [ngSwitch]="selectedValue">
+	<div class="header">
+		<span class="sectionTitle bold">Skills.</span>		
+	</div>
+	<div class="header buttonMenu">
+		<button md-button class="sectionTitle"
+			*ngFor="let skillType of skillsMenu"
+			[ngClass]="skillType.active"
+			(click)="skillSelected(skillType)">{{skillType.name}}</button>
+	</div>	
+	<div class="buttonContainer" *ngSwitchCase="1">
+		<button md-button *ngFor="let skill of devSkills">{{skill.name}}</button>		
+	</div>
+	<div class="buttonContainer" *ngSwitchCase="2">
+		<button md-button *ngFor="let skill of designSkills">{{skill.name}}</button>		
+	</div>
+	<div class="buttonContainer" *ngSwitchCase="3">
+		<button md-button *ngFor="let skill of secondarySkills">{{skill.name}}</button>		
+	</div>			
+</div>
+<div class="divider"></div>
+<div class="standardBox">
+	<div class="header">
+		<span class="sectionTitle bold">Education.</span>		
+	</div>
+	<ul>
+		<li>Bachelor of Science (B.S.) Electronics, Telecoms and Computer Science, Instituto Politécnico Nacional, México city 2007-2012.</li>
+		<li>Associate’s Degree Informatics, Computer science, Instituto Politécnico Nacional, México city 2005-2007.</li>
+	</ul>	
+</div>

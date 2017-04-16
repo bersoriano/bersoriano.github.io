@@ -1,0 +1,97 @@
+$timelineColor: #FFA000;
+
+.experienceHeader
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #ececec;
+	padding: 10px 0;
+	.companyName
+		// flex: 1 1 auto;
+	.date
+		// flex: 0 1 auto;
+	img
+		width: 50px;
+		height: 50px;
+
+.experienceContent
+	min-height: 580px;
+	outline: none;
+
+.experienceHeader .columnCenter
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-left: 25px;
+
+.experienceHeader .columnRight
+	flex: 0 1 auto;
+.timeline
+	.header
+		display: flex;
+	.sectionTitle
+		flex: 1 1 auto;
+	.timelineSegment
+		min-height: 10px;
+		margin-right: 3px;
+		position: relative;
+		
+		&.one
+			min-width: 31%;
+		&.two
+			min-width: 13%;
+		&.three
+			min-width: 8%;
+		&.four
+			min-width: 15%;
+		&.five
+			min-width: 14%;
+		&.six
+			min-width: 14%;
+	.timelineSegment
+		span
+			position: absolute;
+			display: block;
+			width: 100%;
+			margin-left: -16px;
+			&.company
+				text-align: center;
+			&.year
+				padding: 10px 0;
+				text-align: left;
+				top: 0px;
+				top: -43px;
+
+
+.timelineContainer
+	margin: 10px 0 50px;
+
+.timelineSegmentContainer
+    margin-bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    &.years button:after
+		    content: "";
+		    width: 2px;
+		    height: 10px;
+		    background-color: #d7d7d7;
+		    position: absolute;
+		    left: 0px;
+
+.timelineSegmentContainer.years
+	padding: 35px 0 25px 0px; 
+	display: flex;
+	button
+		border-bottom: 1px solid #d7d7d7;
+		margin: 0;
+		border-radius: 0;
+		flex: 1;
+		cursor: default;
+
+.timelineSegmentContainer.company 
+	button
+		border-radius: 0; 
+		background-color: $timelineColor;    	
+
+.experienceContainer
+	text-align: justify;

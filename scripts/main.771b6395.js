@@ -1,1 +1,0 @@
-console.log("'Allo 'Allo!"),$(document).ready(function(){document.ontouchmove=function(a){a.preventDefault()}});
