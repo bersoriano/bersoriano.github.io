@@ -121,6 +121,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HackerGarageComponent = (function () {
     function HackerGarageComponent() {
+        this.executeSearch = function () {
+            debugger;
+            console.log("Searching for: " + this.searchInput);
+            var searchData = this.searchInput;
+            if (this.searchInput !== '') {
+                this.searchResultsActive = true;
+                /*Filter*/
+                this.mockData.forEach(function (element, index, mockData) {
+                    console.info("Element is: " + element.name);
+                    /*If element is found*/
+                    if (element.name.includes(searchData) && searchData.length > 3) {
+                        debugger;
+                        // code...
+                        console.info("found");
+                        this.filteredMockData = [];
+                        this.filteredMockData.push(element);
+                    }
+                    else {
+                        console.info("not found");
+                    }
+                });
+            }
+            else {
+                console.log("Empty");
+                this.searchResultsActive = false;
+            }
+        };
         this.hackathonList = [
             {
                 name: "Apptualízate1 2012",
@@ -195,8 +222,43 @@ var HackerGarageComponent = (function () {
                 active: ""
             }
         ];
+        this.mockData = [
+            {
+                name: "Data 1",
+                property: "Available"
+            },
+            {
+                name: "Data 2",
+                property: "Available"
+            },
+            {
+                name: "Data 3",
+                property: "Available"
+            },
+            {
+                name: "Data 4",
+                property: "Available"
+            },
+            {
+                name: "Data 5",
+                property: "Available"
+            },
+            {
+                name: "Data 6",
+                property: "Available"
+            },
+            {
+                name: "Cat",
+                property: "Available"
+            },
+            {
+                name: "Dog",
+                property: "Available"
+            },
+        ];
     }
     HackerGarageComponent.prototype.ngOnInit = function () {
+        this.filteredMockData = this.mockData;
     };
     HackerGarageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({
@@ -752,7 +814,7 @@ var environment = {
 /***/ 811:
 /***/ function(module, exports) {
 
-module.exports = ".standardBox {\n  padding: 15px 40px; }\n\n.topSection {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n  .topSection span {\n    display: block;\n    text-align: center; }\n  .topSection .title, .topSection .subTitle {\n    margin-bottom: 0; }\n  .topSection .title {\n    font-size: 22px; }\n  .topSection .subTitle {\n    font-size: 18px; }\n  .topSection .header {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-flex: 5;\n        -ms-flex: 5;\n            flex: 5; }\n  .topSection .actions {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1; }\n\n.accesibility {\n  padding: 0;\n  min-width: 35px; }\n  .accesibility.increaseSize {\n    font-size: 22px; }\n  .accesibility.bold {\n    font-weight: 600; }\n  .accesibility:hover {\n    background-color: rgba(234, 234, 234, 0.25);\n    border: 1px solid #e3e3e3; }\n\n.resume {\n  background-color: white;\n  -webkit-box-flex: 5;\n      -ms-flex: 5;\n          flex: 5;\n  width: 740px; }\n\n.mainAppContainer {\n  background-color: #f0f0f0;\n  -webkit-transition: .3s;\n  transition: .3s;\n  position: relative; }\n  .mainAppContainer.largerFontActive .summary, .mainAppContainer.largerFontActive .regularText, .mainAppContainer.largerFontActive li {\n    font-size: 18px;\n    -webkit-transition: .3s;\n    transition: .3s; }\n  .mainAppContainer.boldFontActive .summary, .mainAppContainer.boldFontActive .regularText, .mainAppContainer.boldFontActive li {\n    font-weight: 600;\n    -webkit-transition: .3s;\n    transition: .3s; }\n\n.heroSpace {\n  -webkit-transition: .3s;\n  transition: .3s;\n  overflow: hidden;\n  position: relative;\n  min-height: 94vh;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n  .heroSpace .background {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    opacity: .8;\n    background: url(./assets/ny2.jpg) center no-repeat fixed; }\n  .heroSpace .heroText {\n    position: absolute;\n    width: 100%;\n    margin: 35% 0 0 0;\n    font-size: 44px;\n    color: #dfdcdc;\n    text-shadow: 1px 1px 1px rgba(49, 49, 49, 0.52);\n    padding: 30px; }\n  .heroSpace .space {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 30;\n        -ms-flex: 30;\n            flex: 30;\n    text-align: center; }\n  .heroSpace footer {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    margin: 0 auto;\n    color: #dcdcdc; }\n\n.heroNav {\n  min-width: 200px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: white;\n  margin: 40px;\n  opacity: .8;\n  border-radius: 10px;\n  padding: 10px 25px; }\n  .heroNav .navElement {\n    display: block;\n    margin: 20px 0px;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #dcdcdc;\n    cursor: pointer; }\n\n.mainContent {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.divider {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  height: 1px;\n  background-color: rgba(128, 128, 128, 0.15);\n  margin: 0px 40px; }\n\n.menu, .heroNav {\n  display: none; }\n\n@media screen and (min-width: 1100px) {\n  .mainAppContainer {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .mainAppContainer .heroNav {\n      display: initial; }\n    .mainAppContainer .resume, .mainAppContainer .menu {\n      border: 1px solid #eaeaea;\n      background-color: white;\n      margin: 30px 30px 30px 0px; }\n    .mainAppContainer .menu {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-flex: 2;\n          -ms-flex: 2;\n              flex: 2;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      opacity: .9;\n      padding: 20px 0;\n      max-width: 230px; }\n      .mainAppContainer .menu a {\n        padding: 13px 0px 10px 10px; }\n      .mainAppContainer .menu .menuList.mat-list {\n        padding: 0;\n        border-bottom: 1px solid rgba(128, 128, 128, 0.15);\n        margin-bottom: 15px;\n        padding-bottom: 10px; }\n        .mainAppContainer .menu .menuList.mat-list.scrollable {\n          overflow-y: scroll;\n          max-height: 210px; }\n        .mainAppContainer .menu .menuList.mat-list .mat-list-item {\n          margin-bottom: 1px;\n          min-height: 50px;\n          height: 50px; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item.active {\n            background-color: #1976D2;\n            color: white; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item .mat-list-item-content {\n            min-height: inherit;\n            height: inherit; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item:hover {\n            background-color: #F5F5F5; }\n      .mainAppContainer .menu h4 {\n        text-align: left;\n        padding: 10px 20px;\n        margin: 0;\n        color: #1976d2; }\n  .mainContent {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 2;\n        -ms-flex: 2;\n            flex: 2; } }\n"
+module.exports = ".standardBox {\n  padding: 15px 40px; }\n\n.topSection {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row; }\n  .topSection span {\n    display: block;\n    text-align: center; }\n  .topSection .title, .topSection .subTitle {\n    margin-bottom: 0; }\n  .topSection .title {\n    font-size: 22px; }\n  .topSection .subTitle {\n    font-size: 18px; }\n  .topSection .header {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-flex: 5;\n        -ms-flex: 5;\n            flex: 5; }\n  .topSection .actions {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1; }\n\n.accesibility {\n  padding: 0;\n  min-width: 35px; }\n  .accesibility.increaseSize {\n    font-size: 22px; }\n  .accesibility.bold {\n    font-weight: 600; }\n  .accesibility:hover {\n    background-color: rgba(234, 234, 234, 0.25);\n    border: 1px solid #e3e3e3; }\n\n.resume {\n  background-color: white;\n  -webkit-box-flex: 5;\n      -ms-flex: 5;\n          flex: 5;\n  width: 740px; }\n\n.mainAppContainer {\n  background-color: #f0f0f0;\n  -webkit-transition: .3s;\n  transition: .3s;\n  position: relative; }\n  .mainAppContainer.largerFontActive .summary, .mainAppContainer.largerFontActive .regularText, .mainAppContainer.largerFontActive li {\n    font-size: 18px;\n    -webkit-transition: .3s;\n    transition: .3s; }\n  .mainAppContainer.boldFontActive .summary, .mainAppContainer.boldFontActive .regularText, .mainAppContainer.boldFontActive li {\n    font-weight: 600;\n    -webkit-transition: .3s;\n    transition: .3s; }\n\n.heroSpace {\n  -webkit-transition: .3s;\n  transition: .3s;\n  overflow: hidden;\n  position: relative;\n  min-height: 94vh;\n  overflow: hidden;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n  .heroSpace .background {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    opacity: .8;\n    background: url(./assets/ny2.jpg) center no-repeat fixed; }\n  .heroSpace .heroText {\n    position: absolute;\n    width: 100%;\n    margin: 35% 0 0 0;\n    font-size: 44px;\n    color: #dfdcdc;\n    text-shadow: 1px 1px 1px rgba(49, 49, 49, 0.52);\n    padding: 30px; }\n  .heroSpace .space {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 30;\n        -ms-flex: 30;\n            flex: 30;\n    text-align: center; }\n  .heroSpace footer {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    margin: 0 auto;\n    color: #dcdcdc; }\n\n.heroNav {\n  min-width: 200px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background-color: white;\n  margin: 40px;\n  opacity: .8;\n  border-radius: 10px;\n  padding: 10px 25px; }\n  .heroNav .navElement {\n    display: block;\n    margin: 20px 0px;\n    padding-bottom: 15px;\n    border-bottom: 1px solid #dcdcdc;\n    cursor: pointer; }\n\n.mainContent {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.divider {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  height: 1px;\n  background-color: rgba(128, 128, 128, 0.15);\n  margin: 0px 40px; }\n\n.menu, .heroNav {\n  display: none; }\n\n.globalSearch {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  background-color: white;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n  .globalSearch .mat-input-wrapper {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    border: 1px solid #ecebeb;\n    padding: 10px 20px;\n    margin: 20px 25px; }\n  .globalSearch .mat-input-underline {\n    display: none; }\n\n@media screen and (min-width: 1100px) {\n  .mainAppContainer {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .mainAppContainer .heroNav {\n      display: initial; }\n    .mainAppContainer .resume, .mainAppContainer .menu {\n      border: 1px solid #eaeaea;\n      background-color: white;\n      margin: 30px 30px 30px 0px; }\n    .mainAppContainer .menu {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-flex: 2;\n          -ms-flex: 2;\n              flex: 2;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      opacity: .9;\n      padding: 20px 0;\n      max-width: 230px; }\n      .mainAppContainer .menu a {\n        padding: 13px 0px 10px 10px; }\n      .mainAppContainer .menu .menuList.mat-list {\n        padding: 0;\n        border-bottom: 1px solid rgba(128, 128, 128, 0.15);\n        margin-bottom: 15px;\n        padding-bottom: 10px; }\n        .mainAppContainer .menu .menuList.mat-list.scrollable {\n          overflow-y: scroll;\n          max-height: 210px; }\n        .mainAppContainer .menu .menuList.mat-list .mat-list-item {\n          margin-bottom: 1px;\n          min-height: 50px;\n          height: 50px; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item.active {\n            background-color: #1976D2;\n            color: white; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item .mat-list-item-content {\n            min-height: inherit;\n            height: inherit; }\n          .mainAppContainer .menu .menuList.mat-list .mat-list-item:hover {\n            background-color: #F5F5F5; }\n      .mainAppContainer .menu h4 {\n        text-align: left;\n        padding: 10px 20px;\n        margin: 0;\n        color: #1976d2; }\n  .mainContent {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 2;\n        -ms-flex: 2;\n            flex: 2; } }\n"
 
 /***/ },
 
@@ -766,7 +828,7 @@ module.exports = ".experienceHeader {\n  display: -webkit-box;\n  display: -ms-f
 /***/ 813:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".searchResults {\n  margin: 0;\n  list-style: none;\n  padding: 10px 25px;\n  width: 100%;\n  margin-top: 80px;\n  position: absolute;\n  z-index: 1;\n  background-color: white;\n  border: 1px solid #ecebeb; }\n  .searchResults .searchContainer {\n    padding: 20px 150px; }\n    .searchResults .searchContainer .searchEl {\n      display: block;\n      margin-bottom: 7px; }\n    .searchResults .searchContainer .searchRow {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      margin-bottom: 25px; }\n      .searchResults .searchContainer .searchRow .title {\n        color: #1976d2; }\n      .searchResults .searchContainer .searchRow .searchCol {\n        padding: 0 35px; }\n        .searchResults .searchContainer .searchRow .searchCol.results {\n          border-left: 1px solid #f0f0f0; }\n"
 
 /***/ },
 
@@ -815,7 +877,7 @@ module.exports = "<!-- Timeline -->\n<div class=\"timeline\">\n\t<div class=\"he
 /***/ 820:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"mainAppContainer\">\n\t<div class=\"mainContent\">\n\t\t<!-- Menu -->\n\t\t<div class=\"menu\">\n\t\t\t<h4>Hackathons</h4>\n\t\t\t<md-list class=\"menuList scrollable\">\n\t\t\t  <md-list-item class=\"\" *ngFor=\"let hackathon of hackathonList\">\n\t\t\t  \t<a>{{hackathon.name}}</a>\n\t\t\t  </md-list-item>\n\t\t\t</md-list>\t\t\n\t\t\t<h4>Projects</h4>\n\t\t\t<md-list class=\"menuList scrollable\">\n\t\t\t  <md-list-item class=\"\" *ngFor=\"let project of projectsList\">\n\t\t\t  \t<a href=\"\">{{project.name}}</a>\n\t\t\t  </md-list-item>\n\t\t\t</md-list>\n\t\t</div>\n\t\t<!-- Resume -->\n\t\t<div class=\"resume\">\n\t\t\t<div class=\"topSection standardBox\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h1 class=\"title\">Hacker garage</h1>\t\n\t\t\t\t\t<h2 class=\"subTitle\">Hackathons | Demos | Open Source projects | Material design components</h2>\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\t\n\t</div>\n</div>"
+module.exports = "<div class=\"mainAppContainer\">\n\t<!-- Global search -->\n\t<div class=\"globalSearch\">\n\t\t<md-input-container class=\"globalSearch\">\n\t\t  <input mdInput placeholder=\"\" value=\"\" \n\t\t  [(ngModel)]=\"searchInput\" \n\t\t  (ngModelChange)=\"executeSearch(filteredMockData)\">\n\t\t</md-input-container>\n\t\t<!-- List -->\n\t\t<div class=\"searchResults\" *ngIf=\"searchResultsActive\">\n\t\t\t<div class=\"searchContainer\">\n\t\t\t\t<!-- Search Row -->\n\t\t\t\t<div class=\"searchRow\">\n\t\t\t\t\t<div class=\"searchCol\">\n\t\t\t\t\t\t<span class=\"title\">Category</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"searchCol results\">\n\t\t\t\t\t\t<span class=\"searchEl\" *ngFor=\"let data of filteredMockData\">{{data.name}}</span>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t\t<!-- Search Row -->\n\t\t\t\t<div class=\"searchRow\">\n\t\t\t\t\t<div class=\"searchCol\">\n\t\t\t\t\t\t<span class=\"title\">Category</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"searchCol results\">\n\t\t\t\t\t\t<span class=\"searchEl\" *ngFor=\"let data of filteredMockData\">{{data.name}}</span>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t</div>\t\t\t\t\t\n\t\t\t\t</div>\t\t\t\t\n\t\t\t</div>\n\t\t</div>\t\t\t\t\t\t\t\n\t</div>\n\t<div class=\"mainContent\">\n\t\t<!-- Menu -->\n\t\t<div class=\"menu\">\n\t\t\t<h4>Hackathons</h4>\n\t\t\t<md-list class=\"menuList scrollable\">\n\t\t\t  <md-list-item class=\"\" *ngFor=\"let hackathon of hackathonList\">\n\t\t\t  \t<a>{{hackathon.name}}</a>\n\t\t\t  </md-list-item>\n\t\t\t</md-list>\t\t\n\t\t\t<h4>Projects</h4>\n\t\t\t<md-list class=\"menuList scrollable\">\n\t\t\t  <md-list-item class=\"\" *ngFor=\"let project of projectsList\">\n\t\t\t  \t<a href=\"\">{{project.name}}</a>\n\t\t\t  </md-list-item>\n\t\t\t</md-list>\n\t\t</div>\n\t\t<!-- Resume -->\n\t\t<div class=\"resume\">\n\t\t\t<div class=\"topSection standardBox\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<!-- <h1 class=\"title\">Hacker garage</h1>\t\n\t\t\t\t\t<h2 class=\"subTitle\">Hackathons | Demos | Open Source projects | Material design components</h2> -->\n<!-- \t\t\t\t\t<md-card class=\"cardContainer\">\t\t\t\t\t\t\t\t\n\t\t\t\t\t</md-card> -->\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\t\t\n\t\t</div>\t\n\t</div>\n</div>"
 
 /***/ },
 
